@@ -1,0 +1,45 @@
+@import models.GameState
+
+@(gameState: GameState)
+
+@main("Kniffel Game Field") {
+  <div class="game-field-container">
+    <header class="game-header">
+      <h1>Kniffel Spiel</h1>
+    </header>
+    
+    <!-- Spieler anzeigen -->
+    <div class="players-section">
+      <h2>Spieler</h2>
+      <ul>
+        @for(player <- gameState.players) {
+          <li>@player</li>
+        }
+      </ul>
+    </div>
+    
+    <div class="form-section">
+      <!-- Würfeln -->
+      <form action="@routes.KniffelController.rollDice" method="post" class="game-form">
+        <button type="submit" class="btn">Würfeln</button>
+      </form>
+
+      <!-- Kategorie auswählen -->
+      <form action="@routes.KniffelController.selectCategory" method="post" class="game-form">
+        <label for="category">Kategorie auswählen:</label>
+        <select id="category" name="category">
+          @for(category <- gameState.categories) {
+            <option value="@category">@category</option>
+          }
+        </select>
+        <button type="submit" class="btn">Kategorie bestätigen</button>
+      </form>
+    </div>
+
+    <!-- TUI Ausgabe -->
+    <div class="tui-output">
+      <h2>Spiel Ausgabe</h2>
+      <pre>@gameState.output</pre>
+    </div>
+  </div>
+}

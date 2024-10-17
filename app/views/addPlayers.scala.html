@@ -1,0 +1,31 @@
+@(players: List[String])(implicit flash: play.api.mvc.Flash)
+
+@main("Kniffel - Spieler hinzufügen") {
+  <div class="add-players">
+    <h1>Spieler hinzufügen</h1>
+
+    @flash.get("error").map { errorMessage =>
+      <div class="alert alert-danger">
+        @errorMessage
+      </div>
+    }
+
+    <!-- Spieler hinzufügen Formular -->
+    <form action="@routes.KniffelController.addPlayer" method="post">
+        <label for="playerName">Spieler Name:</label>
+        <input type="text" id="playerName" name="playerName" required>
+        <button type="submit">Spieler hinzufügen</button>
+    </form>
+
+    <h2>Aktuelle Spieler:</h2>
+    <ul>
+        @for(player <- players) {
+            <li>@player</li>
+        }
+    </ul>
+
+    <form action="@routes.KniffelController.startGame" method="post">
+        <button type="submit">Spiel Starten</button>
+    </form>
+  </div>
+}

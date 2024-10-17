@@ -1,0 +1,40 @@
+@(output: String, categories: List[String])
+
+@main("Kniffel Game Field") {
+  <div class="game-field-container">
+    <header class="game-header">
+      <h1>Kniffel Spiel</h1>
+    </header>
+    
+    <div class="form-section">
+      <!-- Spieler hinzufügen -->
+      <form action="@routes.KniffelController.addPlayer" method="post" class="game-form">
+        <label for="playerName">Spieler Name:</label>
+        <input type="text" id="playerName" name="playerName" required>
+        <button type="submit" class="btn">Spieler hinzufügen</button>
+      </form>
+
+      <!-- Würfeln -->
+      <form action="@routes.KniffelController.rollDice" method="post" class="game-form">
+        <button type="submit" class="btn">Würfeln</button>
+      </form>
+
+      <!-- Kategorie auswählen -->
+      <form action="@routes.KniffelController.selectCategory" method="post" class="game-form">
+        <label for="category">Kategorie auswählen:</label>
+        <select id="category" name="category">
+          @for(category <- categories) {
+            <option value="@category">@category</option>
+          }
+        </select>
+        <button type="submit" class="btn">Kategorie bestätigen</button>
+      </form>
+    </div>
+
+    <!-- TUI Ausgabe -->
+    <div class="tui-output">
+      <h2>Spiel Ausgabe</h2>
+      <pre>@output</pre>
+    </div>
+  </div>
+}
