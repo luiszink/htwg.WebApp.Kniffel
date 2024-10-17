@@ -1,0 +1,115 @@
+@main("Kniffel - About") {
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #444;
+        }
+
+        h2 {
+            color: #444;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #444;
+            color: #fff;
+            border-radius: 8px;
+        }
+    </style>
+    <div class="container">
+        <header>
+            <h1>About the Kniffel Project</h1>
+        </header>
+
+        <div class="content">
+            <h2>Welcome to the Kniffel Project</h2>
+            <p>Welcome to the Kniffel Project – a modern take on the classic dice game! This project was developed as part of my studies in Applied Computer Science, with a focus on enhancing skills in <strong>web development</strong>, <strong>software engineering</strong>, and <strong>user interface design</strong>. Kniffel, also known as Yahtzee, is a game of luck and strategy where players aim to score the highest number of points by rolling five dice and matching specific combinations.</p>
+
+            <h2>Project Overview</h2>
+            <p>This Kniffel game is built using <strong>Scala</strong> with the <strong>Play Framework</strong>, combining backend functionality with a clean and interactive frontend experience. One of the primary goals of this project was to integrate a terminal-based User Interface (TUI) into a web application, allowing users to play the game directly through their browser.</p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Classic Kniffel gameplay</strong> with familiar rules and score combinations.</li>
+                <li><strong>Interactive Web UI</strong>: Powered by Scala's Play Framework to ensure smooth and responsive gameplay.</li>
+                <li><strong>TUI Integration</strong>: The game offers a command-line style interface within the browser for users who enjoy a retro gaming experience.</li>
+                <li><strong>Scoring Automation</strong>: Automatic calculation of scores based on the combinations rolled, following the traditional rules of Kniffel.</li>
+            </ul>
+
+            <h2>Technology Stack</h2>
+            <ul>
+                <li><strong>Programming Language</strong>: Scala</li>
+                <li><strong>Framework</strong>: Play Framework</li>
+                <li><strong>Frontend</strong>: HTML, CSS, JavaScript (for UI interactions)</li>
+                <li><strong>Backend</strong>: RESTful APIs built using Play for handling game logic</li>
+                <li><strong>Development Tools</strong>: SBT (Scala Build Tool), Metals for Scala, and Git for version control.</li>
+            </ul>
+
+            <h2>Learning Goals</h2>
+            <p>The Kniffel project is not just a fun game, but a learning experience in applying various software development principles:</p>
+            <ul>
+                <li><strong>Software Architecture</strong>: Design and development of a modular system where the backend game logic is decoupled from the frontend.</li>
+                <li><strong>Unit Testing</strong>: Extensive use of <strong>JUnit</strong> for testing game logic and ensuring robust code quality.</li>
+                <li><strong>Continuous Integration</strong>: Using Git and automated testing to ensure smooth project evolution and maintain code reliability.</li>
+            </ul>
+
+            <h2>Challenges and Future Plans</h2>
+            <p>One of the challenges in this project was integrating the TUI within a modern web interface. Moving forward, I aim to:</p>
+            <ul>
+                <li>Improve the UI design and make it more visually appealing.</li>
+                <li>Expand the game with multiplayer support, allowing users to compete against each other in real-time.</li>
+                <li>Implement advanced features like saving and loading games, and leaderboards to track high scores.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Kniffel Project. All rights reserved.</p>
+        </footer>
+    </div>
+}

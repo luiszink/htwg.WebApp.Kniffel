@@ -1,9 +1,60 @@
 @(players: List[String])(implicit flash: play.api.mvc.Flash)
 
 @main("Kniffel - Spieler hinzufügen") {
-  <div class="add-players">
-    <h1>Spieler hinzufügen</h1>
+    <style>
+        .add-players {
+            max-width: 800px;  /* Maximale Breite des Containers */
+            margin: 20px auto;  /* Zentriert den Container horizontal */
+            padding: 20px;  /* Innenabstand */
+            background-color: white;  /* Hintergrundfarbe */
+            border-radius: 8px;  /* Abgerundete Ecken */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Schatten */
+            display: flex;  /* Flexbox für Layout */
+            flex-direction: column;  /* Inhalte untereinander anordnen */
+            align-items: center;  /* Inhalte horizontal zentrieren */
+        }
 
+        h1, h2 {
+            margin: 10px 0;  /* Abstand oben und unten */
+        }
+
+        form {
+            width: 100%;  /* Formulare nehmen die gesamte Breite des Containers ein */
+            margin: 10px 0;  /* Abstand zwischen Formularen */
+        }
+
+        label {
+            display: block;  /* Label auf eigener Zeile */
+            margin-bottom: 5px;  /* Abstand zum Eingabefeld */
+        }
+
+        input[type="text"] {
+            width: 100%;  /* Eingabefeld nimmt die gesamte Breite ein */
+            padding: 10px;  /* Innenabstand */
+            border: 1px solid #ccc;  /* Rahmen */
+            border-radius: 4px;  /* Abgerundete Ecken */
+        }
+
+        button {
+            background-color: #28a745;  /* Grüner Hintergrund */
+            color: white;  /* Schriftfarbe */
+            padding: 10px;  /* Innenabstand */
+            border: none;  /* Kein Rahmen */
+            border-radius: 4px;  /* Abgerundete Ecken */
+            cursor: pointer;  /* Zeigt an, dass es klickbar ist */
+            margin-top: 10px;  /* Abstand oben */
+        }
+
+        button:hover {
+            background-color: #218838;  /* Dunklere Farbe beim Hover */
+        }
+    </style>
+    
+  <div class="add-players">
+    <div>
+    <h1>Spieler hinzufügen</h1>
+    </div>
+    <div>
     @flash.get("error").map { errorMessage =>
       <div class="alert alert-danger">
         @errorMessage
@@ -16,16 +67,19 @@
         <input type="text" id="playerName" name="playerName" required>
         <button type="submit">Spieler hinzufügen</button>
     </form>
-
+</div>  
+<div>
     <h2>Aktuelle Spieler:</h2>
     <ul>
         @for(player <- players) {
             <li>@player</li>
         }
     </ul>
-
+</div>
+<div>
     <form action="@routes.KniffelController.startGame" method="post">
         <button type="submit">Spiel Starten</button>
     </form>
-  </div>
+</div>
+</div>
 }

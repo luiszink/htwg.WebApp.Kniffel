@@ -3396,3 +3396,62 @@ SCHWERWIEGEND: A severe compiler error occurred, full details of the error can b
 2024.10.17 18:21:21 WARN  Using indexes to guess the definition of addPlayers
 2024.10.17 18:21:41 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
 2024.10.17 18:22:10 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:36:46 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:36:46 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:36:46 WARN  Using indexes to guess the definition of players
+2024.10.17 18:36:48 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:37:18 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:37:21 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:37:28 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:37:34 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:38:13 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:38:48 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:39:36 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:40:35 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+Okt. 17, 2024 6:41:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 5678
+2024.10.17 18:41:21 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:43:26 WARN  Using indexes to guess the definition of KniffelController
+2024.10.17 18:43:42 WARN  Using indexes to guess the definition of showGameField
+2024.10.17 18:43:42 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:43:42 WARN  Using indexes to guess the definition of showGameField
+2024.10.17 18:44:04 ERROR Failed to tokenize input for semantic tokens for C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+scala.meta.tokenizers.TokenizeException: <input>:39: error: unclosed string literal
+    val categories = List(", "Kategorie 2", "Kategorie 3") // Hier echte Kategorien abrufen
+                                                        ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:560)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:379)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:383)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:214)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:982)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:23)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:16)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:960)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:16)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:331)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:597)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:842)
+
+2024.10.17 18:44:07 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:54:40 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 18:54:49 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+Okt. 17, 2024 7:03:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 6329
+Okt. 17, 2024 7:03:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 6347
+2024.10.17 19:06:09 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 19:06:18 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala
+2024.10.17 19:26:04 WARN  no build target for: C:\Users\Samsung\OneDrive - bwedu\Studium\AIN\Semester 5\Web-Applicationen\Kniffel\kniffel\app\controllers\KniffelController.scala

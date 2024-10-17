@@ -36,18 +36,18 @@ class KniffelController @Inject()(cc: ControllerComponents, controller: Controll
 
     val output = s"$diceOutput\n$scoreCardOutput\n$rollPrompt"
     val currentPlayers = players.toList
-    val categories = List("Kategorie 1", "Kategorie 2", "Kategorie 3") // Hier echte Kategorien abrufen
+    val categories = List("one", "Kategorie 2", "Kategorie 3") // Hier echte Kategorien abrufen
 
     GameState(output, currentPlayers, categories)
   }
 
   def about = Action {
-    Ok(views.html.index())
+    Ok(views.html.about())
   }
 
   def selectCategory = Action { implicit request: Request[AnyContent] =>
     val selectedCategory = request.body.asFormUrlEncoded.get("category").head
-    // Hier Kategorie anwenden
+    gameController.updateScore(selectedCategory)
     Redirect(routes.KniffelController.showGameField)
   }
   def showGameField = Action { implicit request =>
@@ -64,8 +64,8 @@ class KniffelController @Inject()(cc: ControllerComponents, controller: Controll
   def addPlayer = Action { implicit request =>
     val playerName = request.body.asFormUrlEncoded.get("playerName").head
     gameController.addPlayer(playerName)
-    //players += playerName // Spieler zur Liste hinzufügen
+    players += playerName 
+    Redirect(routes.KniffelController.showAddPlayers).flashing("success" -> s"$playerName wurde hinzugefügt!")
 
-    Redirect(routes.KniffelController.showGameField)
   }
 }
