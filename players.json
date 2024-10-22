@@ -19,7 +19,7 @@
         "totalScore" : null,
         "chance" : null,
         "largestraight" : null,
-        "one" : 1
+        "one" : null
       }
     }
   }, {
@@ -42,7 +42,7 @@
         "totalScore" : null,
         "chance" : null,
         "largestraight" : null,
-        "one" : 1
+        "one" : null
       }
     }
   } ]
