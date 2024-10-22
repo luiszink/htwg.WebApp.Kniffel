@@ -16,13 +16,9 @@ class KniffelController @Inject()(cc: ControllerComponents, controller: Controll
   val tui = new TUI(gameController)
   var players: ListBuffer[String] = ListBuffer.empty
 
-  def showAddPlayers = Action { implicit request => // Implicit request added
-    Ok(views.html.addPlayers(players.toList))
-  }
-
  def startGame = Action {
     if (players.nonEmpty) {
-      players.foreach(controller.addPlayer) // Spieler ins Spiel hinzufügen
+      players.foreach(controller.addPlayer)
       Redirect(routes.KniffelController.showGameField)
     } else {
       Redirect(routes.KniffelController.showAddPlayers).flashing("error" -> "Bitte füge mindestens einen Spieler hinzu.")
@@ -35,10 +31,13 @@ class KniffelController @Inject()(cc: ControllerComponents, controller: Controll
     val rollPrompt = tui.printRoll() 
 
     val output = s"$diceOutput\n$scoreCardOutput\n$rollPrompt"
-    val currentPlayers = players.toList
-    val categories = List("one", "Kategorie 2", "Kategorie 3") // Hier echte Kategorien abrufen
-
+    val currentPlayers = gameController.getPlayers
+    val categories = List("one", "two", "three", "four", "five", "six", "threeofakind", "fourofakind", "fullhouse", "smallstraight", "largestraight", "kniffel", "chance")
     GameState(output, currentPlayers, categories)
+  }
+  
+  def showAddPlayers = Action { implicit request =>
+    Ok(views.html.addPlayers(players.toList))
   }
 
   def about = Action {
@@ -50,14 +49,13 @@ class KniffelController @Inject()(cc: ControllerComponents, controller: Controll
     gameController.updateScore(selectedCategory)
     Redirect(routes.KniffelController.showGameField)
   }
+
   def showGameField = Action { implicit request =>
-    val gameState = getGameState
     Ok(views.html.game(getGameState))
   }
 
   def rollDice = Action { implicit request =>
     gameController.rollDice()
-    val gameState = getGameState
     Ok(views.html.game(getGameState))
   }
 
@@ -66,6 +64,5 @@ class KniffelController @Inject()(cc: ControllerComponents, controller: Controll
     gameController.addPlayer(playerName)
     players += playerName 
     Redirect(routes.KniffelController.showAddPlayers).flashing("success" -> s"$playerName wurde hinzugefügt!")
-
   }
 }

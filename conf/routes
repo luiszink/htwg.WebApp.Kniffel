@@ -5,7 +5,7 @@
 
 # Controller for Kniffel
 GET     /                           controllers.KniffelController.showAddPlayers
-GET     /gameField                  controllers.KniffelController.showGameField
+GET     /game                       controllers.KniffelController.showGameField
 
 GET     /about                      controllers.KniffelController.about
 

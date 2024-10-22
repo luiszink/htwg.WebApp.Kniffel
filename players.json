@@ -19,11 +19,11 @@
         "totalScore" : null,
         "chance" : null,
         "largestraight" : null,
-        "one" : null
+        "one" : 1
       }
     }
   }, {
-    "name" : "Michi",
+    "name" : "Marvin",
     "scoreCard" : {
       "categories" : {
         "two" : null,
@@ -42,7 +42,7 @@
         "totalScore" : null,
         "chance" : null,
         "largestraight" : null,
-        "one" : null
+        "one" : 1
       }
     }
   } ]
