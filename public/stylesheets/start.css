@@ -1,0 +1,69 @@
+/* Container-Styles für die gesamte Startseite */
+.start-page-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("/assets/images/start_background.png");
+    background-size: cover;
+    background-position: center; /* Zentriert das Bild */
+    background-repeat: no-repeat; /* Verhindert Bildwiederholung */
+    background-color: #f0f0f0; /* Fallback-Hintergrundfarbe */
+    text-align: center;
+
+}
+
+
+/* Play Button Section */
+.play-button-section {
+    z-index: 10;
+    margin-top: 100px;
+}
+
+.play-button {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover-Effekt für .play-button */
+.play-button:hover {
+    background-color: #45A049;
+    transform: scale(1.1);
+}
+
+
+/* Hintergrund-Würfel und Becher */
+.background-dice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.dice-bg {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 200px;
+    opacity: 0.8;
+}
+
+.dice-cup-bg {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    width: 250px;
+    opacity: 0.8;
+}

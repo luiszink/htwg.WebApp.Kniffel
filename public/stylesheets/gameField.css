@@ -1,0 +1,50 @@
+/* Container für das Spielfeld */
+.game-field-container {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    
+/* Header Style */
+.game-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+    
+.game-header h1 {
+  color: #444;
+  font-size: 2.5em;
+}
+
+.game-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+    
+.game-form label {
+  font-size: 1.2em;
+}
+    
+.game-form input, 
+.game-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Bereich für die TUI Ausgabe */
+.tui-output {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+   margin-top: 20px;
+}
+
+.tui-output h2 {
+  margin-top: 0;
+}

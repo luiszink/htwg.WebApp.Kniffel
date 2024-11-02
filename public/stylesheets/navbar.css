@@ -1,6 +1,15 @@
+.navbar {
+    position: fixed; /* oder absolute, je nach Bedarf */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* oder einen höheren Wert */
+}
+
 nav {
     background-color: #333;
     overflow: hidden;
+    float: top;
 }
 
 nav a {
@@ -21,8 +30,4 @@ nav a:hover {
 nav a.active {
     background-color: #04AA6D;
     color: white;
-}
-
-body {
-    font-family: Arial, sans-serif;
 }
