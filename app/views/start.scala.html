@@ -1,0 +1,15 @@
+@main("Kniffel - Start") {
+    <div class="start-page-container">
+        
+        <!-- Button zum Spielen -->
+        <div class="play-button-section">
+            <a href="@routes.KniffelController.addPlayer" class="play-button">Jetzt spielen</a>
+        </div>
+
+        <!-- Hintergrund-Würfel und Becher (werden im Hintergrund über CSS angezeigt) -->
+        <div class="background-dice">
+            <img src="@routes.Assets.versioned("images/dice_cup.png")" alt="Würfelbecher" class="dice-cup-bg">
+            <img src="@routes.Assets.versioned("images/two_dices.png")" alt="Würfel" class="dice-bg">
+        </div>
+    </div>
+}

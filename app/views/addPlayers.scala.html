@@ -2,35 +2,36 @@
 
 @main("Kniffel - Spieler hinzufügen") {
   <div class="add-players">
-    <div>
-    <h1>Spieler hinzufügen</h1>
-    </div>
-    <div>
-    @flash.get("error").map { errorMessage =>
-      <div class="alert alert-danger">
-        @errorMessage
-      </div>
-    }
+    <div class="form-container">
+      <h1>Spieler hinzufügen</h1>
 
-    <!-- Spieler hinzufügen Formular -->
-    <form action="@routes.KniffelController.addPlayer" method="post">
+      @flash.get("error").map { errorMessage =>
+        <div class="alert alert-danger">
+          @errorMessage
+        </div>
+      }
+
+      <!-- Spieler hinzufügen Formular -->
+      <form action="@routes.KniffelController.addPlayer" method="post">
         <label for="playerName">Spieler Name:</label>
         <input type="text" id="playerName" name="playerName" required>
-        <button type="submit">Spieler hinzufügen</button>
-    </form>
-</div>  
-<div>
-    <h2>Aktuelle Spieler:</h2>
-    <ul>
+        <button type="submit" class="add-player-button">Spieler hinzufügen</button>
+      </form>
+    </div>
+
+    <div class="player-list-container">
+      <h2>Aktuelle Spieler:</h2>
+      <ul>
         @for(player <- players) {
-            <li>@player</li>
+          <li>@player</li>
         }
-    </ul>
-</div>
-<div>
+      </ul>
+    </div>
+  </div>
+
+  <div class="start-game-button">
     <form action="@routes.KniffelController.startGame" method="post">
-        <button type="submit">Spiel Starten</button>
+      <button type="submit">Spiel Starten</button>
     </form>
-</div>
-</div>
+  </div>
 }

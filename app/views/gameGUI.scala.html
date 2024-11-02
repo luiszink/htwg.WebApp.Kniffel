@@ -23,6 +23,16 @@
       <form action="@routes.KniffelController.rollDice" method="post" class="game-form">
         <button type="submit" class="btn">Würfeln</button>
       </form>
+      <div class="wrap">
+        <div class="cube">
+          <div class="front">vorne</div>
+          <div class="back">hinten</div>
+          <div class="top">oben</div>
+          <div class="bottom">unten</div>
+          <div class="left">links</div>
+          <div class="right">rechts</div>
+        </div>
+      </div>
 
       <!-- Kategorie auswählen -->
       <form action="@routes.KniffelController.selectCategory" method="post" class="game-form">
@@ -35,7 +45,7 @@
         <button type="submit" class="btn">Kategorie bestätigen</button>
       </form>
     </div>
-    
+
     <!-- TUI Ausgabe -->
     <div class="tui-output">
       <h2>Spiel Ausgabe</h2>
