@@ -16,6 +16,10 @@ class KniffelController @Inject()(cc: ControllerComponents, controller: Controll
   val tui = new TUI(gameController)
   var players: ListBuffer[String] = ListBuffer.empty
 
+  def startScene = Action {
+    Ok(views.html.start())
+  }
+
  def startGame = Action {
     if (players.nonEmpty) {
       players.foreach(controller.addPlayer)
